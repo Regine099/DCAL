@@ -44,7 +44,6 @@ HTML = '''<!DOCTYPE html>
     display: flex;
   }
 
-  /* ── SIDEBAR ── */
   .sidebar {
     width: var(--sidebar-w);
     min-height: 100vh;
@@ -61,7 +60,6 @@ HTML = '''<!DOCTYPE html>
   }
   .sidebar.collapsed { width: var(--sidebar-collapsed); }
 
-  /* toggle button */
   .sidebar-toggle {
     display: flex;
     align-items: center;
@@ -86,7 +84,6 @@ HTML = '''<!DOCTYPE html>
   .toggle-btn svg { width: 16px; height: 16px; transition: transform var(--transition); }
   .sidebar.collapsed .toggle-btn svg { transform: rotate(180deg); }
 
-  /* nav items */
   .sidebar-nav {
     flex: 1;
     overflow-y: auto;
@@ -147,14 +144,12 @@ HTML = '''<!DOCTYPE html>
   }
   .sidebar.collapsed .nav-label { opacity: 0; pointer-events: none; }
 
-  /* divider */
   .nav-divider {
     height: 1px;
     background: var(--border);
     margin: 6px 4px;
   }
 
-  /* PROFILE SECTION */
   .profile-section {
     display: none;
     flex-direction: column;
@@ -200,7 +195,6 @@ HTML = '''<!DOCTYPE html>
     width: fit-content;
   }
 
-  /* HISTORY SECTION */
   .history-section {
     display: none;
     flex-direction: column;
@@ -262,7 +256,6 @@ HTML = '''<!DOCTYPE html>
   }
   .btn-clear-sm:hover { border-color: var(--accent-r); color: var(--accent-r); }
 
-  /* SETTINGS SECTION */
   .settings-section {
     display: none;
     flex-direction: column;
@@ -309,14 +302,12 @@ HTML = '''<!DOCTYPE html>
   }
   .toggle-switch.on::after { transform: translateX(16px); }
 
-  /* SIDEBAR BOTTOM */
   .sidebar-bottom {
     padding: 8px;
     border-top: 1px solid var(--border);
     flex-shrink: 0;
   }
 
-  /* ── MAIN ── */
   .main {
     margin-left: var(--sidebar-w);
     flex: 1;
@@ -427,10 +418,8 @@ HTML = '''<!DOCTYPE html>
 </head>
 <body>
 
-<!-- SIDEBAR -->
 <aside class="sidebar" id="sidebar">
 
-  <!-- Toggle -->
   <div class="sidebar-toggle">
     <button class="toggle-btn" onclick="toggleSidebar()" title="Toggle sidebar">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -441,7 +430,6 @@ HTML = '''<!DOCTYPE html>
 
   <div class="sidebar-nav" id="sidebar-nav">
 
-    <!-- PROFILE -->
     <div class="nav-section-label">Account</div>
     <button class="nav-item active" onclick="toggleSection('profile')">
       <span class="nav-icon">
@@ -464,7 +452,6 @@ HTML = '''<!DOCTYPE html>
 
     <div class="nav-divider"></div>
 
-    <!-- HISTORY -->
     <div class="nav-section-label">Data</div>
     <button class="nav-item" onclick="toggleSection('history')">
       <span class="nav-icon">
@@ -481,7 +468,6 @@ HTML = '''<!DOCTYPE html>
 
     <div class="nav-divider"></div>
 
-    <!-- SETTINGS -->
     <div class="nav-section-label">Preferences</div>
     <button class="nav-item" onclick="toggleSection('settings')">
       <span class="nav-icon">
@@ -522,7 +508,6 @@ HTML = '''<!DOCTYPE html>
 
   </div>
 
-  <!-- LOGOUT -->
   <div class="sidebar-bottom">
     <button class="nav-item danger" onclick="alert('Logged out!')">
       <span class="nav-icon">
@@ -537,7 +522,6 @@ HTML = '''<!DOCTYPE html>
 
 </aside>
 
-<!-- MAIN -->
 <main class="main" id="main">
 
   <div class="header">
@@ -591,7 +575,7 @@ HTML = '''<!DOCTYPE html>
     });
   }
 
-  // ── MATRIX LOGIC ──
+  //Logic
   function empty(r, c) { return Array.from({length: r}, () => Array(c).fill(0)); }
   function clamp(v, lo, hi) { return Math.min(hi, Math.max(lo, v)); }
 
