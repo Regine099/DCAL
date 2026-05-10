@@ -39,7 +39,6 @@ SHARED_STYLES = '''
     padding: 24px;
   }
 
-  /* ── CARD ── */
   .auth-card {
     background: var(--surface);
     border: 1px solid var(--border);
@@ -50,7 +49,6 @@ SHARED_STYLES = '''
     box-shadow: 0 2px 24px rgba(0,0,0,0.05);
   }
 
-  /* ── LOGO ── */
   .logo {
     text-align: center;
     margin-bottom: 28px;
@@ -72,7 +70,6 @@ SHARED_STYLES = '''
     text-transform: uppercase;
   }
 
-  /* ── TABS ── */
   .tabs {
     display: flex;
     border: 1px solid var(--border);
@@ -101,7 +98,6 @@ SHARED_STYLES = '''
     color: #fff;
   }
 
-  /* ── FORM ── */
   .form-group { margin-bottom: 16px; }
   .form-group label {
     display: block;
@@ -132,7 +128,6 @@ SHARED_STYLES = '''
   }
   .form-group input.error { border-color: var(--accent-r); }
 
-  /* ── PASSWORD WRAPPER ── */
   .pw-wrap { position: relative; }
   .pw-wrap input { padding-right: 42px; }
   .pw-toggle {
@@ -146,7 +141,6 @@ SHARED_STYLES = '''
   .pw-toggle:hover { color: var(--text); }
   .pw-toggle svg { width: 16px; height: 16px; display: block; }
 
-  /* ── HINT & ERROR MESSAGES ── */
   .field-hint {
     font-size: 0.62rem;
     color: var(--muted);
